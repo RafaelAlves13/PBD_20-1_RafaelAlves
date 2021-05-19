@@ -1,5 +1,7 @@
 package dao;
 
-public interface IFornecedorDAO {
+import model.Fornecedor;
+
+public interface IFornecedorDAO extends IDao<Fornecedor>{
 
 }

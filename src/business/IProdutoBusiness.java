@@ -1,5 +1,7 @@
 package business;
 
-public interface IProdutoBusiness {
+import model.Produto;
+
+public interface IProdutoBusiness extends IBusiness<Produto>{
 
 }

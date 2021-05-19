@@ -1,5 +1,7 @@
 package dao;
 
-public interface IVendaDAO {
+import model.Venda;
+
+public interface IVendaDAO extends IDao<Venda>{
 
 }

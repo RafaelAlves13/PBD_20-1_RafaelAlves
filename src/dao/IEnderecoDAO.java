@@ -1,5 +1,7 @@
 package dao;
 
-public interface IEnderecoDAO {
+import model.Endereco;
+
+public interface IEnderecoDAO extends IDao<Endereco>{
 
 }

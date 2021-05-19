@@ -1,5 +1,7 @@
 package business;
 
-public interface IFornecedorBusiness {
+import model.Fornecedor;
+
+public interface IFornecedorBusiness extends IBusiness<Fornecedor>{
 
 }

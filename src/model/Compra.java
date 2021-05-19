@@ -1,8 +1,7 @@
 package model;
 
-import javax.persistence.Entity;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "compra")
@@ -12,15 +11,61 @@ public class Compra extends Entidade{
 	
 	private static final long serialVersionUID = 1L;
     protected static final String SEQUENCE_ENTIDADE = "compra_sequence";
-    
-    private String data; 
-    
+
+    @ManyToOne
+    @JoinColumn(name = "produto_id")
     private Produto produto;
-    
-    private double preco;
-    
+
+    @ManyToOne
+    @JoinColumn(name = "fornecedor_id")
     private Fornecedor fornecedor;
-    
+
+    @Column(name = "qnt")
     private int qnt;
-        
+
+    @Column(name = "preco")
+    private double preco;
+
+    @Column(name = "data_compra")
+    private LocalDate dataCompra;
+
+    public Produto getProduto() {
+        return produto;
+    }
+
+    public void setProduto(Produto produto) {
+        this.produto = produto;
+    }
+
+    public Fornecedor getFornecedor() {
+        return fornecedor;
+    }
+
+    public void setFornecedor(Fornecedor fornecedor) {
+        this.fornecedor = fornecedor;
+    }
+
+    public int getQnt() {
+        return qnt;
+    }
+
+    public void setQnt(int qnt) {
+        this.qnt = qnt;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public LocalDate getDataCompra() {
+        return dataCompra;
+    }
+
+    public void setDataCompra(LocalDate dataCompra) {
+        this.dataCompra = dataCompra;
+    }
 }

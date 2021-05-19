@@ -1,5 +1,7 @@
 package dao;
 
-public interface ICaixaDAO {
+import model.Caixa;
+
+public interface ICaixaDAO extends IDao<Caixa>{
 
 }

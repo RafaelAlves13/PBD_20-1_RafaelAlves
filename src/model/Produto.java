@@ -1,8 +1,6 @@
 package model;
 
-import javax.persistence.Entity;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "produto")
@@ -12,14 +10,49 @@ public class Produto extends Entidade{
 	
 	private static final long serialVersionUID = 1L;
     protected static final String SEQUENCE_ENTIDADE = "produto_sequence";
-    
+
+    @Column(nullable = false, unique = true)
     private String codigo;
-    
+
+    @Column(name = "marca")
     private String marca;
-    
+
+    @OneToOne
+    @JoinColumn(name = "fornecedor_id")
     private Fornecedor fornecedor;
-    
+
+    @Column(nullable = false, length = 50)
     private String nome;
-    
-    
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public Fornecedor getFornecedor() {
+        return fornecedor;
+    }
+
+    public void setFornecedor(Fornecedor fornecedor) {
+        this.fornecedor = fornecedor;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }

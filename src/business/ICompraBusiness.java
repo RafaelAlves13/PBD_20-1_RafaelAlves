@@ -1,5 +1,7 @@
 package business;
 
-public interface ICompraBusiness {
+import model.Compra;
+
+public interface ICompraBusiness extends IBusiness<Compra>{
 
 }

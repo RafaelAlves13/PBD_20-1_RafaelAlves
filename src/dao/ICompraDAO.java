@@ -1,5 +1,7 @@
 package dao;
 
-public interface ICompraDAO {
+import model.Compra;
+
+public interface ICompraDAO extends IDao<Compra>{
 
 }

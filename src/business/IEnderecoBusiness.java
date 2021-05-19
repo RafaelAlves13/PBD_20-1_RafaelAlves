@@ -1,5 +1,7 @@
 package business;
 
-public interface IEnderecoBusiness {
+import model.Endereco;
+
+public interface IEnderecoBusiness extends IBusiness<Endereco>{
 
 }

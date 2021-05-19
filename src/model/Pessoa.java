@@ -1,32 +1,38 @@
 package model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "pessoa")
 @SequenceGenerator(name = Entidade.SEQUENCE_ENTIDADE, sequenceName = Pessoa.SEQUENCE_ENTIDADE, initialValue = 1, allocationSize = 1)
 
-public class Pessoa extends Entidade{
+public abstract class Pessoa extends Entidade{
 
 	private static final long serialVersionUID = 1L;
     protected static final String SEQUENCE_ENTIDADE = "pessoa_sequence";
-    
-    private String email;
-    
-    private String nome;
-    
-    private String observacao;
-    
-    private String cpf;
-    
-    private String cnpj;
-    
-    private String telefone;
-    
-    
+
+    @Column(nullable = false, length = 50)
+	private String email;
+
+	@Column(nullable = false, length = 50)
+	private String nome;
+
+	@Column(nullable = false, length = 100)
+	private String observacao;
+
+	@Column(nullable = false, unique = true)
+	private String cpf;
+
+	@Column(nullable = false, unique = true)
+	private String cnpj;
+
+	@Column(nullable = false, length = 20)
+	private String telefone;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "endereco_id")
+	private Endereco endereco;
 
 	public String getEmail() {
 		return email;
@@ -76,11 +82,11 @@ public class Pessoa extends Entidade{
 		this.telefone = telefone;
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
+	public Endereco getEndereco() {
+		return endereco;
 	}
 
-	public static String getSequenceEntidade() {
-		return SEQUENCE_ENTIDADE;
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 }

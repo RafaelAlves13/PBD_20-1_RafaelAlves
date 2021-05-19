@@ -1,5 +1,7 @@
 package business;
 
-public interface IVendaBusiness {
+import model.Venda;
+
+public interface IVendaBusiness extends IBusiness<Venda>{
 
 }

@@ -4,7 +4,20 @@
 	<persistence-unit name="PBD_20-1_RafaelAlves" transaction-type="RESOURCE_LOCAL">
 	   
 	    <class>model.Pessoa</class>
-			
+		<class>model.Caixa</class>
+		<class>model.Cliente</class>
+		<class>model.Compra</class>
+		<class>model.Endereco</class>
+		<class>model.Fornecedor</class>
+		<class>model.Gerente</class>
+		<class>model.itemProduto</class>
+		<class>model.Log</class>
+		<class>model.OperadorCaixa</class>
+		<class>model.Produto</class>
+		<class>model.SuperUsuario</class>
+		<class>model.Usuario</class>
+		<class>model.Venda</class>
+
 		<properties>
 			<!-- Detectar automaticamente as classes-tabelas -->
 			<property name="hibernate.archive.autodetection" value="cAlass" />
@@ -19,7 +32,7 @@
 			<property name="javax.persistence.jdbc.password" value="131313" />
 		
 			<!-- conexão com o banco: forma de atualização: create, update... -->
-			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.hbm2ddl.auto" value="create" />
 		
 			<!-- Opcional: DEBUG -->
 			<property name="hibernate.show_sql" value="true" />

@@ -1,5 +1,11 @@
 package dao;
 
-public class VendaDAO {
+import model.Venda;
+
+public class VendaDAO extends Dao<Venda> implements IVendaDAO{
+
+    public VendaDAO() {
+        super(Venda.class);
+    }
 
 }

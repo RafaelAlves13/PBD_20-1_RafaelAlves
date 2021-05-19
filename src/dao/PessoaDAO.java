@@ -5,14 +5,16 @@ import javax.persistence.EntityManagerFactory;
 
 import model.Pessoa;
 
-public class PessoaDAO{
-	  private EntityManager em; 
+public class PessoaDAO extends Dao<Pessoa> implements IPessoaDAO{
+	  private EntityManager em;
 
-	  public PessoaDAO() {
-//	      this.emf = Persistence.createEntityManagerFactory("AulasJPAPU");
-	  }
+	public PessoaDAO() {
+		super(Pessoa.class);
+	}
 
-	  public void persist(Pessoa p, EntityManagerFactory emf) {
+
+
+    public void persist(Pessoa p, EntityManagerFactory emf) {
 	      try {
 	          this.em = emf.createEntityManager();
 	          em.getTransaction().begin(); 

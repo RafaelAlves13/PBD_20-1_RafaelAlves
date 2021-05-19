@@ -1,5 +1,7 @@
 package business;
 
-public interface IClienteBusiness {
+import model.Cliente;
+
+public interface IClienteBusiness extends IBusiness<Cliente>{
 
 }

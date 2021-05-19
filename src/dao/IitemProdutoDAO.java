@@ -1,5 +1,7 @@
 package dao;
 
-public interface IitemProdutoDAO {
+import model.itemProduto;
+
+public interface IitemProdutoDAO extends IDao<itemProduto>{
 
 }

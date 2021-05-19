@@ -1,5 +1,7 @@
 package business;
 
-public interface ICaixaBusiness {
+import model.Caixa;
+
+public interface ICaixaBusiness extends IBusiness<Caixa>{
 
 }
