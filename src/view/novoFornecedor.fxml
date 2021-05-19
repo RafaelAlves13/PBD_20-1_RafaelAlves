@@ -21,7 +21,7 @@
                <graphic>
                   <ImageView fitHeight="12.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Desktop/sistema-controle-vendas-javafx-master/src/view/img/barcode-icon.png" />
+                        <Image url="@img/checked-icon.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -40,27 +40,17 @@
                <graphic>
                   <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Desktop/sistema-controle-vendas-javafx-master/src/view/img/price-icon.png" />
+                        <Image url="@img/main-homepage-icon-14x12.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Label>
             <TextField fx:id="emailFornecedorField" layoutX="25.0" layoutY="241.0" prefHeight="40.0" prefWidth="300.0" style="-fx-border-color: red;" styleClass="textfield-editing" AnchorPane.leftAnchor="30.0" />
-            <Label graphicTextGap="8.0" layoutX="382.0" layoutY="220.0" style="-fx-text-fill: #999;" text="xxxx">
-               <graphic>
-                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../Desktop/sistema-controle-vendas-javafx-master/src/view/img/price-icon.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Label>
-            <TextField layoutX="384.0" layoutY="241.0" prefHeight="40.0" prefWidth="291.0" style="-fx-border-color: red;" styleClass="textfield-editing" AnchorPane.rightAnchor="30.0" />
             <Label graphicTextGap="8.0" layoutX="385.0" layoutY="105.0" style="-fx-text-fill: #999;" text="Telefone">
                <graphic>
                   <ImageView fitHeight="12.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Desktop/sistema-controle-vendas-javafx-master/src/view/img/quantity-icon.png" />
+                        <Image url="@img/edit-file-16x16.png" />
                      </image>
                   </ImageView>
                </graphic>

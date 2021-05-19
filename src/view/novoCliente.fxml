@@ -13,7 +13,7 @@
 
 <AnchorPane fx:id="novoClienteAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: rgba(0,0,0,0.25);" stylesheets="@../../../../Desktop/sistema-controle-vendas-javafx-master/src/view/css/app.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.novoClienteController">
    <children>
-      <AnchorPane layoutX="107.0" layoutY="51.0" prefHeight="564.0" prefWidth="700.0" style="-fx-background-color: #fff;">
+      <AnchorPane layoutX="101.0" layoutY="50.0" prefHeight="564.0" prefWidth="700.0" style="-fx-background-color: #fff;">
          <effect>
             <DropShadow color="#a4a2a2" height="12.1" radius="6.2925" width="15.07" />
          </effect>
@@ -23,7 +23,7 @@
                <graphic>
                   <ImageView fitHeight="12.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Desktop/sistema-controle-vendas-javafx-master/src/view/img/barcode-icon.png" />
+                        <Image url="@img/barcode-icon.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -42,7 +42,7 @@
                <graphic>
                   <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Desktop/sistema-controle-vendas-javafx-master/src/view/img/price-icon.png" />
+                        <Image url="@img/edit-file-16x16.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -52,7 +52,7 @@
                <graphic>
                   <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Desktop/sistema-controle-vendas-javafx-master/src/view/img/price-icon.png" />
+                        <Image url="@img/login-user-light-15x15.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -61,7 +61,7 @@
                <graphic>
                   <ImageView fitHeight="12.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Desktop/sistema-controle-vendas-javafx-master/src/view/img/quantity-icon.png" />
+                        <Image url="@img/calendarIcon.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -75,7 +75,7 @@
                <graphic>
                   <ImageView fitHeight="12.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Desktop/sistema-controle-vendas-javafx-master/src/view/img/quantity-icon.png" />
+                        <Image url="@img/home-notification.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -91,7 +91,7 @@
                <graphic>
                   <ImageView fitHeight="12.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../Desktop/sistema-controle-vendas-javafx-master/src/view/img/quantity-icon.png" />
+                        <Image url="@img/edit-file-16x16.png" />
                      </image>
                   </ImageView>
                </graphic>
