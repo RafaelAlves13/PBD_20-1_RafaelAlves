@@ -94,7 +94,7 @@
                <graphic>
                   <ImageView fitHeight="12.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@img/item-view-details-dark-16x12.png" />
+                        <Image url="@img/home-notification.png" />
                      </image>
                   </ImageView>
                </graphic>

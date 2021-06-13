@@ -24,6 +24,12 @@ public class Produto extends Entidade{
     @Column(nullable = false, length = 50)
     private String nome;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "id",unique=true, nullable = false)
+    private Integer id;
+
     public String getCodigo() {
         return codigo;
     }
@@ -54,5 +60,13 @@ public class Produto extends Entidade{
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getId() {
+        return id;
     }
 }

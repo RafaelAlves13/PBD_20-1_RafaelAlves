@@ -28,7 +28,7 @@ public class EnderecoBusiness extends Business<Endereco> implements IEnderecoBus
             throw new ValidacaoException("O campo Logradouro tem que está preenchido!"); }
         if (endereco.getNumero().isEmpty()){
             throw new ValidacaoException("O campo Numero tem que está preenchido!"); }
-        if (endereco.getUf().describeConstable().isEmpty()){
-            throw new ValidacaoException("O campo UF tem que está preenchido!"); }
+//        if (endereco.getUf().equals(""){
+//            throw new ValidacaoException("O campo UF tem que está preenchido!"); }
     }
 }

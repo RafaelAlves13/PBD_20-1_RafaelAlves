@@ -29,6 +29,12 @@ public class Compra extends Entidade{
     @Column(name = "data_compra")
     private LocalDate dataCompra;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "id",unique=true, nullable = false)
+    private Integer id;
+
     public Produto getProduto() {
         return produto;
     }
@@ -67,5 +73,13 @@ public class Compra extends Entidade{
 
     public void setDataCompra(LocalDate dataCompra) {
         this.dataCompra = dataCompra;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getId() {
+        return id;
     }
 }

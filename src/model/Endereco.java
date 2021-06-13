@@ -34,6 +34,13 @@ public class Endereco extends Entidade{
     @Column(nullable = false, length = 100)
     private String complemento;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "id", unique=true, nullable = false)
+    private Integer id;
+
+
     public String getCidade() {
         return cidade;
     }
@@ -101,5 +108,13 @@ public class Endereco extends Entidade{
                 ", logradouro='" + logradouro + '\'' +
                 ", complemento='" + complemento + '\'' +
                 '}';
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getId() {
+        return id;
     }
 }

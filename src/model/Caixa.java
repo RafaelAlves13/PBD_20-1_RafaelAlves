@@ -1,10 +1,7 @@
 package model;
 
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "caixa")
@@ -26,6 +23,12 @@ public class Caixa extends Entidade{
 
     @Column
     private double verTotal;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "id",unique=true, nullable = false)
+    private Integer id;
 
     public double getEntrada() {
         return entrada;
@@ -57,5 +60,13 @@ public class Caixa extends Entidade{
 
     public void setVerTotal(double verTotal) {
         this.verTotal = verTotal;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getId() {
+        return id;
     }
 }

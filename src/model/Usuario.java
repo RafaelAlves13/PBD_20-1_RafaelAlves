@@ -29,6 +29,12 @@ public abstract class Usuario extends Entidade{
     @Enumerated(EnumType.STRING)
     private ResetSenha solicitar_reset;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "id",unique=true, nullable = false)
+    private Integer id;
+
     public String getSenha() {
         return senha;
     }
@@ -67,5 +73,13 @@ public abstract class Usuario extends Entidade{
 
     public void setSolicitar_reset(ResetSenha solicitar_reset) {
         this.solicitar_reset = solicitar_reset;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getId() {
+        return id;
     }
 }

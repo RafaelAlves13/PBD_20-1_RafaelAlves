@@ -44,10 +44,10 @@ public class loginController implements Initializable {
     @FXML
     void entrar(ActionEvent event) throws IOException {
         if(efetuarLogin()){
-            Main.stagePrincipal().show();
-            Main.stagePrincipal().setResizable(false);
-            Main.stagePrincipal().setTitle("Tela Inicial");
-            Main.stageLogin().close();
+//            Main.stagePrincipal().show();
+//            Main.stagePrincipal().setResizable(false);
+//            Main.stagePrincipal().setTitle("Tela Inicial");
+//            Main.stageLogin().close();
         }
     }
     public boolean efetuarLogin(){
@@ -84,7 +84,7 @@ public class loginController implements Initializable {
     @FXML
     void esqueceuSenha(ActionEvent event) throws IOException {
 
-        Main.genericaStage(Main.RESETARSENHA);
+//        Main.genericaStage(Main.RESETARSENHA);
     }
 
     @Override

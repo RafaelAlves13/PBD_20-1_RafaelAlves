@@ -34,6 +34,12 @@ public abstract class Pessoa extends Entidade{
 	@JoinColumn(name = "endereco_id")
 	private Endereco endereco;
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Basic(optional = false)
+	@Column(name = "id",unique=true, nullable = false)
+	private Integer id;
+
 	public String getEmail() {
 		return email;
 	}
@@ -88,5 +94,13 @@ public abstract class Pessoa extends Entidade{
 
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Integer getId() {
+		return id;
 	}
 }

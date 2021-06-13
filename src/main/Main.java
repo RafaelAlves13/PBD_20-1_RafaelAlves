@@ -22,7 +22,7 @@ import model.Usuario;
 
 import java.io.IOException;
 
-public class Main extends Application {
+public class Main{
 
     public static final String ABRIRCAIXA = "/view/abrirCaixa.fxml";
     public static final String CATEGORIA = "/view/categoria.fxml";
@@ -38,14 +38,10 @@ public class Main extends Application {
     public static final String RELATORIOVENDAS = "/view/relatorioVendas.fxml";
     public static final String RESETARSENHA = "/view/resetarSenha.fxml";
 
-    //public static  Stage STAGE = new Stage();
-//    public static  Stage STAGE_PRINCIPAL = new Stage();
-
     public static void main(String[] args) throws BussinesException {
         IFacade facade = Facade.getInstance();
 
-        launch(args);
-
+//        launch(args);
 
         Endereco endereco = new Endereco();
         endereco.setBairro("AABB");
@@ -70,14 +66,14 @@ public class Main extends Application {
 
         facade.inserirOuAtualizarCliente(cliente);
     }
-
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-
-        Pane root = FXMLLoader.load(getClass().getResource(LOGIN));
-        Scene scene = new Scene(root);
-        primaryStage.setScene(scene);
-        primaryStage.show();
+//
+//    @Override
+//    public void start(Stage primaryStage) throws Exception {
+//
+//        Pane root = FXMLLoader.load(getClass().getResource(LOGIN));
+//        Scene scene = new Scene(root);
+//        primaryStage.setScene(scene);
+//        primaryStage.show();
 
 //        STAGE.initOwner(STAGE_PRINCIPAL);
 //        STAGE.initModality(Modality.WINDOW_MODAL);
@@ -87,45 +83,45 @@ public class Main extends Application {
 //        stageLogin().initStyle(StageStyle.UNDECORATED);
 //        stageLogin().show();
 
-    }
+//    }
 
-    public static Stage stagePrincipal() throws IOException {
-        Stage STAGE = new Stage();
-        Stage STAGE_PRINCIPAL = new Stage();
-        STAGE_PRINCIPAL.setScene(new Scene(
-                FXMLLoader.load(Main.class.getResource (MAIN))));
-        STAGE.setOnCloseRequest(new EventHandler<WindowEvent>() {
-            public void handle(WindowEvent event) {
-                System.exit(0);}});
-        return  STAGE_PRINCIPAL;
-    }
-
-
-    public static  Stage stageLogin() throws IOException {
-        Stage STAGE = new Stage();
-        STAGE.setScene(new Scene(
-                FXMLLoader.load(Main.class.getResource(LOGIN))));
-        STAGE.setOnCloseRequest(new EventHandler<WindowEvent>() {
-            public void handle(WindowEvent event) { STAGE.close(); }});
-        return STAGE;
-    }
-
-
-    public static Stage genericaStage(String caminho) throws IOException {
-        Stage STAGE = new Stage();
-        STAGE.setScene(new Scene(
-                FXMLLoader.load(Main.class.getResource (caminho))));
-        STAGE.setOnCloseRequest(new EventHandler<WindowEvent>() {
-            public void handle(WindowEvent event) { STAGE.close(); }});
-        return STAGE;
-    }
-
-    public static Stage genericaStage01(Stage STAGE, String caminho) throws IOException {
-        STAGE.setScene(new Scene(
-                FXMLLoader.load(Main.class.getResource (caminho))));
-        STAGE.setOnCloseRequest(new EventHandler<WindowEvent>() {
-            public void handle(WindowEvent event) { STAGE.close(); }});
-        return STAGE;
-    }
+//    public static Stage stagePrincipal() throws IOException {
+//        Stage STAGE = new Stage();
+//        Stage STAGE_PRINCIPAL = new Stage();
+//        STAGE_PRINCIPAL.setScene(new Scene(
+//                FXMLLoader.load(Main.class.getResource (MAIN))));
+//        STAGE.setOnCloseRequest(new EventHandler<WindowEvent>() {
+//            public void handle(WindowEvent event) {
+//                System.exit(0);}});
+//        return  STAGE_PRINCIPAL;
+//    }
+//
+//
+//    public static  Stage stageLogin() throws IOException {
+//        Stage STAGE = new Stage();
+//        STAGE.setScene(new Scene(
+//                FXMLLoader.load(Main.class.getResource(LOGIN))));
+//        STAGE.setOnCloseRequest(new EventHandler<WindowEvent>() {
+//            public void handle(WindowEvent event) { STAGE.close(); }});
+//        return STAGE;
+//    }
+//
+//
+//    public static Stage genericaStage(String caminho) throws IOException {
+//        Stage STAGE = new Stage();
+//        STAGE.setScene(new Scene(
+//                FXMLLoader.load(Main.class.getResource (caminho))));
+//        STAGE.setOnCloseRequest(new EventHandler<WindowEvent>() {
+//            public void handle(WindowEvent event) { STAGE.close(); }});
+//        return STAGE;
+//    }
+//
+//    public static Stage genericaStage01(Stage STAGE, String caminho) throws IOException {
+//        STAGE.setScene(new Scene(
+//                FXMLLoader.load(Main.class.getResource (caminho))));
+//        STAGE.setOnCloseRequest(new EventHandler<WindowEvent>() {
+//            public void handle(WindowEvent event) { STAGE.close(); }});
+//        return STAGE;
+//    }
 
 }

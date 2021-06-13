@@ -11,28 +11,34 @@ public class Venda extends Entidade{
 	private static final long serialVersionUID = 1L;
     protected static final String SEQUENCE_ENTIDADE = "produto_sequence";
 
-    @Column(nullable = false)
+    @JoinColumn(name = "produto")
     private String produto;
 
     @OneToOne
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
-    @Column(nullable = false)
+    @Column(name = "data")
     private String data;
 
-    @Column(nullable = false)
+    @Column(name = "preco_Total")
     private double precoTotal;
 
-    @Column(nullable = false)
+    @Column(name = "qnt")
     private int qnt;
 
-    @Column(nullable = false)
+    @Column(name = "desconto")
     private double desconto;
 
     @ManyToOne
     @JoinColumn(name = "caixa_id")
     private Caixa caixa;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "id",unique=true, nullable = false)
+    private Integer id;
 
     public String getProduto() {
         return produto;
@@ -88,5 +94,13 @@ public class Venda extends Entidade{
 
     public void setCaixa(Caixa caixa) {
         this.caixa = caixa;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getId() {
+        return id;
     }
 }
